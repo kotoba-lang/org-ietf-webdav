@@ -48,7 +48,7 @@
     - Authentication (Basic/Digest/bearer) — the deploy shell owns
       auth, exactly as CACAO verification lives in the kotobase.net
       Worker, not in the engine."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [kotobase.protocols.http :as http]
             [kotobase.store :as st]))
 
