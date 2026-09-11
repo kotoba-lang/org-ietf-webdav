@@ -21,7 +21,7 @@ browser worker, fleet peer) own transport and authentication.
 |---|---|---|
 | `kotobase.protocols.webdav` | `OPTIONS`/`GET`/`PUT`/`DELETE`/`HEAD`/`PROPFIND` (Depth 0/1)/`MKCOL` | §16.1 Name (+ `:webdav/collection?` flag) |
 
-`src/kotobase/protocols/http.cljc` (ring-shaped request/response plumbing) is
+`src/kotobase/protocols/http.cljk` (ring-shaped request/response plumbing) is
 vendored byte-for-byte from `kotoba-lang/kotobase-protocols` per
 ADR-2607172210 — this repo has no runtime dependency on
 `kotobase-protocols`, only on `kotobase` itself (the `IStore` seam). Update
@@ -91,7 +91,7 @@ wasm` > `clojurewasm` > ClojureScript > nbb > (jvm/bb)):
 
 ```bash
 git clone https://github.com/kotoba-lang/kotobase .deps/kotobase
-nbb --classpath "src:test:.deps/kotobase/src" bin/run_tests.cljs
+nbb --classpath "src:test:.deps/kotobase/src" bin/run_tests.cljk
 ```
 
 The `:test` alias in `deps.edn` is the JVM **compat** suite only (via
