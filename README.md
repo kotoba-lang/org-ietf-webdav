@@ -91,7 +91,7 @@ wasm` > `clojurewasm` > ClojureScript > nbb > (jvm/bb)):
 
 ```bash
 git clone https://github.com/kotoba-lang/kotobase .deps/kotobase
-nbb --classpath "src:test:.deps/kotobase/src" bin/run_tests.cljk
+kbb --backend sci --classpath "src:test:.deps/kotobase/src" bin/run_tests.cljk
 ```
 
 The `:test` alias in `deps.edn` is the JVM **compat** suite only (via
